@@ -49,6 +49,6 @@ class CompaniesControllerTest < ActionDispatch::IntegrationTest
   test "status should be in STATUSES" do
     comp = Company.new
     comp.status = "huh?"
-    refute(comp.save!, "Company saved with status outside of STATUSES constant")
+    refute(comp.save!, "Company saved with status outside of STATUSES constant array")
   end
 end
