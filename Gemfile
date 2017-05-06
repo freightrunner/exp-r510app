@@ -37,6 +37,9 @@ gem 'bootstrap', '~> 4.0.0.alpha6'
 source 'https://rails-assets.org' do
   gem 'rails-assets-tether', '>= 1.3.3'
 end
+# special config for Devise with Rails 5.1.0
+gem 'devise', git: 'https://github.com/gogovan/devise.git', branch: 'rails-5.1'
+gem 'erubis'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
