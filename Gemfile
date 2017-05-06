@@ -33,6 +33,7 @@ gem 'jbuilder', '~> 2.5'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
+## GEMS I've Added
 gem 'bootstrap', '~> 4.0.0.alpha6'
 source 'https://rails-assets.org' do
   gem 'rails-assets-tether', '>= 1.3.3'
@@ -40,6 +41,8 @@ end
 # special config for Devise with Rails 5.1.0
 gem 'devise', git: 'https://github.com/gogovan/devise.git', branch: 'rails-5.1'
 gem 'erubis'
+# Needed to get bootstrap working
+gem 'jquery-rails', '~> 4.3', '>= 4.3.1'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
