@@ -46,9 +46,9 @@ class CompaniesControllerTest < ActionDispatch::IntegrationTest
     assert_redirected_to companies_url
   end
 
-  test "status should be in STATUSES" do
+  test "status should be in enum status:" do
     comp = Company.new
     comp.status = "huh?"
-    refute(comp.save!, "Company saved with status outside of STATUSES constant array")
+    refute(comp.save!, "Company saved with status outside of status: array")
   end
 end
