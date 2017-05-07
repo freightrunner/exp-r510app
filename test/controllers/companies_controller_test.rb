@@ -60,4 +60,11 @@ class CompaniesControllerTest < ActionDispatch::IntegrationTest
     comp = Company.new(name: "A Name", website_address: nil)
     refute comp.valid?, "Company saved without website address"
   end
+
+  test "company website address must be unique" do
+    comp1 = Company.new(name: "Company One", website_address: "website.com")
+    comp1.save
+    comp2 = Company.new(name: "Company Two", website_address: "website.com")
+    refute comp2.valid?, "company saved with duplicate website address"
+  end
 end
