@@ -55,4 +55,9 @@ class CompaniesControllerTest < ActionDispatch::IntegrationTest
     comp = Company.new(name: nil, website_address: "address.com")
     refute comp.valid?, 'company is valid without a name'
   end
+
+  test "company must have website address to be saved" do
+    comp = Company.new(name: "A Name", website_address: nil)
+    refute comp.valid?, "Company saved without website address"
+  end
 end
