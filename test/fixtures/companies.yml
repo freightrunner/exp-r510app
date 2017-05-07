@@ -5,9 +5,18 @@ one:
   phone_number: 123-456-7890
   website_address: website.com
   user: one
+  status: 0
 
 two:
   name: company two
   phone_number: 234-567-8901
   website_address: otherwebsite.com
   user: two
+  status: 1
+
+dnc_company:
+  name: dnc company
+  phone_number: 555-555-5555
+  website_address: dontcall.net
+  status: 2
+  user: one

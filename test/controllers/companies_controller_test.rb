@@ -50,4 +50,9 @@ class CompaniesControllerTest < ActionDispatch::IntegrationTest
     comp = Company.new
     assert_equal("is_available", comp.status)
   end
+
+  test "company must have name to be saved" do
+    comp = Company.new(name: nil, website_address: "address.com")
+    refute comp.valid?, 'company is valid without a name'
+  end
 end
