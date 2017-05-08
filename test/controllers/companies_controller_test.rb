@@ -17,7 +17,7 @@ class CompaniesControllerTest < ActionDispatch::IntegrationTest
 
   test "should create company" do
     assert_difference('Company.count') do
-      post companies_url, params: { company: { name: @company.name, phone_number: @company.phone_number, user_id: @company.user_id, website_address: @company.website_address } }
+      post companies_url, params: { company: { name: "Test Co", phone_number: "123-456-7890", user_id: @company.user_id, website_address: "auniquewebsite.com" } }
     end
 
     assert_redirected_to company_url(Company.last)
@@ -61,10 +61,4 @@ class CompaniesControllerTest < ActionDispatch::IntegrationTest
     refute comp.valid?, "Company saved without website address"
   end
 
-  test "company website address must be unique" do
-    comp1 = Company.new(name: "Company One", website_address: "website.com")
-    comp1.save
-    comp2 = Company.new(name: "Company Two", website_address: "website.com")
-    refute comp2.valid?, "company saved with duplicate website address"
-  end
 end
