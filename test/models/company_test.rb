@@ -6,7 +6,5 @@ class CompanyTest < ActiveSupport::TestCase
 		comp.save
 		assert_equal "1234567890", comp.phone_number
 	end
-  # test "the truth" do
-  #   assert true
-  # end
+
 end
