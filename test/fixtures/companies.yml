@@ -5,7 +5,7 @@ one:
   phone_number: 123-456-7890
   website_address: website.com
   user: one
-  status: 0
+  status: 1
 
 two:
   name: company two
