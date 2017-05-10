@@ -19,7 +19,7 @@ $ rails db:create
 $ rails db:migrate</code></pre>
 
 * Database Initialization <br>
-<code>$ sudo service postgresql start
+<code>$ sudo service postgresql start<br>
 random line</code>
 
 * How to run the test suite
