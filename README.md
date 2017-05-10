@@ -18,13 +18,8 @@ postgres=# \q
 $ rails db:create
 $ rails db:migrate</code></pre>
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
+* Database Initialization
+<code>$ sudo service postgresql start</code>
 
 * How to run the test suite
 
