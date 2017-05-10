@@ -19,9 +19,13 @@ $ rails db:create
 $ rails db:migrate</code></pre>
 
 * Database Initialization <br>
+
 <code>$ sudo service postgresql start</code>
 
 * How to run the test suite <br>
+* Migration for test db (1st time): <br>
+<code>$ rails db:migrate RAILS_ENV=test</code>
+* To run tests <br>
 <code>$ rails test</code>
 
 * Services (job queues, cache servers, search engines, etc.)
