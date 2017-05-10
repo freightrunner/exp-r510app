@@ -2,14 +2,20 @@
 
 one:
   company: one
-  first_name: MyString
-  last_name: MyString
-  phone_number: MyString
-  email: MyString
+  title: CEO
+  first_name: John
+  last_name: Doe
+  office_phone_number: 555-555-5555
+  office_phone_extension: 123
+  cell_phone_number: 666-666-6666
+  email: johnd@test.com
 
 two:
   company: two
-  first_name: MyString
-  last_name: MyString
-  phone_number: MyString
-  email: MyString
+  title: Director of Marketing
+  first_name: Jane
+  last_name: Doe
+  office_phone_number: 555-555-5555
+  office_phone_extension: 123
+  cell_phone_number: 666-666-6666
+  email: janed@test.com

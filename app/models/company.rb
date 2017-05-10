@@ -1,6 +1,6 @@
 class Company < ApplicationRecord
   belongs_to :user, optional: true
-  has_many :contacts
+  has_many :contacts, dependent: :destroy
 
   validates :name, presence: true
   validates :website_address, presence: true
