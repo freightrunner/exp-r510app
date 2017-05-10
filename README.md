@@ -1,12 +1,7 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+* Ruby version 2.3.1
 
-Things you may want to cover:
-
-* Ruby version
-Ruby v2.3.1
 * How to setup postgresql development database in Cloud 9:
 <pre><code>$ gem install rails-5.1.0
 $ bundle install
