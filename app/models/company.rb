@@ -1,5 +1,6 @@
 class Company < ApplicationRecord
   belongs_to :user, optional: true
+  has_many :contacts
 
   validates :name, presence: true
   validates :website_address, presence: true
