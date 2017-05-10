@@ -11,17 +11,16 @@ class Company < ApplicationRecord
   enum status: [ :is_available, :is_lead, :do_not_call, :is_contracted ]
 
   def company_is_available?
-  	status == 0
+  	status == "is_available"
   end
-
-  def remove_user
-  		self.user = nil
-  end
-
 
   private
 
   	def format_phone_number
   		self.phone_number = phone_number.gsub(/[^0-9]/, "") if attribute_present?("phone_number")
   	end
+  	
+  	def remove_user
+  		self.user = nil
+    end
 end
