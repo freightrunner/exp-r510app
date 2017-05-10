@@ -21,7 +21,8 @@ $ rails db:migrate</code></pre>
 * Database Initialization <br>
 <code>$ sudo service postgresql start</code>
 
-* How to run the test suite
+* How to run the test suite <br>
+<code>$ rails test</code>
 
 * Services (job queues, cache servers, search engines, etc.)
 
