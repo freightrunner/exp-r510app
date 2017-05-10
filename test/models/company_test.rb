@@ -14,8 +14,8 @@ class CompanyTest < ActiveSupport::TestCase
 		comp.save
 		assert_equal "is_available", comp.status
 		comp.update!(user: @user, status: 1)
-		assert_equal @user, comp.user
-		refute comp.update!(status: 0), "Comapny updated to status 0 saved with User"
+		comp.update!(status: 0)
+		assert comp.user = nil, "Company status updated to 0 but still has user assigned"
 	end
 
 end
