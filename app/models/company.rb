@@ -20,7 +20,7 @@ class Company < ApplicationRecord
   		self.phone_number = phone_number.gsub(/[^0-9]/, "") if attribute_present?("phone_number")
   	end
   	
-  	def remove_user
-  		self.user = nil
+    def remove_user
+      self.user = nil
     end
 end

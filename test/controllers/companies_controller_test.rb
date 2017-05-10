@@ -45,20 +45,4 @@ class CompaniesControllerTest < ActionDispatch::IntegrationTest
 
     assert_redirected_to companies_url
   end
-
-  test "new company should have status[0]" do
-    comp = Company.new
-    assert_equal("is_available", comp.status)
-  end
-
-  test "company must have name to be saved" do
-    comp = Company.new(name: nil, website_address: "address.com")
-    refute comp.valid?, 'company is valid without a name'
-  end
-
-  test "company must have website address to be saved" do
-    comp = Company.new(name: "A Name", website_address: nil)
-    refute comp.valid?, "Company saved without website address"
-  end
-
 end

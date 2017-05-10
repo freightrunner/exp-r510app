@@ -5,6 +5,21 @@ class CompanyTest < ActiveSupport::TestCase
 		@user = users(:one)
 		@company = companies(:one)
 	end
+	
+	test "company must have website address to be saved" do
+	  comp = Company.new(name: "A Name", website_address: nil)
+		refute comp.valid?, "Company saved without website address"
+	end
+	
+	test "new company should have status[0]" do
+    comp = Company.new
+    assert_equal("is_available", comp.status)
+  end
+
+  test "company must have name to be saved" do
+    comp = Company.new(name: nil, website_address: "address.com")
+    refute comp.valid?, 'company is valid without a name'
+  end
 
 	test "Company phone number has all dashes and dots removed" do
 		comp = Company.new(name: "A company", website_address: "xyz.com", phone_number: "123-456-7890")
@@ -12,20 +27,8 @@ class CompanyTest < ActiveSupport::TestCase
 		assert_equal "1234567890", comp.phone_number
 	end
 	
-	test "if company status is open then user is removed" do
-    #@user = User.new
-    #@user.save
-    #comp = Company.new(name: "A Company", website_address: "somewebsite.org", phone_number: "1234567890", user: nil, status: 0)
-    #comp.save!
-    #assert_equal "is_available", comp.status
-    #comp.update!(user: @user, status: 1)
-    #comp.update!(status: 0)
-    assert_equal false, @company.user.nil?
-    assert_equal "is_lead", @company.status
-    @company.update(status: 0)
-    @company.save!
-    assert_equal true, @company.user.nil?
-  end
-	
-
+	test "if company status is changed to is_available then user is removed" do
+	  @company.update!(status: 0)
+	  assert_equal true, @company.user.nil?
+	end
 end
