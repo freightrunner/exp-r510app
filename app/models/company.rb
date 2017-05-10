@@ -11,7 +11,7 @@ class Company < ApplicationRecord
   enum status: [ :is_available, :is_lead, :do_not_call, :is_contracted ]
 
   def company_is_available?
-  	status == "is_available"
+  	self.is_available?
   end
 
   private
