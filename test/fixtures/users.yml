@@ -8,6 +8,5 @@ one:
   email: test@test.com
 # column: value
 #
-two:
-  email: test2@test.com
-# column: value
+admin:
+  email: admin@test.com

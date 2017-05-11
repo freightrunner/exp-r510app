@@ -1,6 +1,7 @@
 require 'test_helper'
 
 class ContactsControllerTest < ActionDispatch::IntegrationTest
+  include Devise::Test::IntegrationHelpers
   setup do
     @contact = contacts(:one)
   end
