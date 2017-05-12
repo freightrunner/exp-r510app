@@ -31,6 +31,7 @@ $ rails db:migrate</code></pre>
 * Services (job queues, cache servers, search engines, etc.)
 
 * Deployment instructions
+Currently running on Heroku under desolate-sea-88056
 
 
 # exp-r510app
