@@ -6,6 +6,7 @@ one:
   website_address: website.com
   user: one
   status: 1
+  segment_category: Architecture
 
 two:
   name: company two
@@ -13,6 +14,7 @@ two:
   website_address: otherwebsite.com
   user: admin
   status: 1
+  segment_category: Architecture
 
 dnc_company:
   name: dnc company
@@ -20,6 +22,7 @@ dnc_company:
   website_address: dontcall.net
   status: 2
   user: one
+  segment_category: Architecture
 
 is_taken:
   name: someones lead
@@ -27,3 +30,4 @@ is_taken:
   website_address: somelead.net
   status: 1
   user: one
+  segment_category: Architecture
