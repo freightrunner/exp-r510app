@@ -1,4 +1,4 @@
-<p id="notice"><%= notice %></p>
+
 <div class="row">
   <h1>Companies</h1>
 </div>
@@ -6,11 +6,21 @@
   <div class="row">
     <thead>
       <tr>
-        <th>Name</th>
-        <th>Phone number</th>
-        <th>Website address</th>
-        <th>User</th>
-        <th colspan="3"></th>
+        <div class="col">
+          <th>Name</th>
+        </div>
+        <div class="col">
+          <th>Phone number</th>
+        </div>
+        <div class="col">
+          <th>Website address</th>
+        </div>
+        <div class="col">
+          <th>User</th>
+        </div>
+        <div class="col">
+          <th>Actions</th>
+        </div>
       </tr>
     </thead>
   </div>
@@ -18,13 +28,23 @@
     <tbody>
       <% @companies.each do |company| %>
         <tr>
-          <td><%= company.name %></td>
-          <td><%= company.phone_number %></td>
-          <td><%= company.website_address %></td>
-          <td><%= company.user %></td>
-          <td><%= link_to 'Show', company %></td>
-          <td><%= link_to 'Edit', edit_company_path(company) %></td>
-          <td><%= link_to 'Destroy', company, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          <div class="col">
+            <td><%= company.name %></td>
+          </div>
+          <div class="col">
+            <td><%= company.phone_number %></td>
+          </div>
+          <div class="col">
+            <td><%= company.website_address %></td>
+          </div>
+          <div class="col">
+            <td><%= company.user %></td>
+          </div>
+          <div class="col">
+            <td><%= link_to 'Show', company %></td>
+            <td><%= link_to 'Edit', edit_company_path(company) %></td>
+            <td><%= link_to 'Destroy', company, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          </div>
         </tr>
       <% end %>
     </tbody>
