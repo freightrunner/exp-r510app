@@ -1,55 +1,44 @@
-
-<div class="row">
-  <h1>Companies</h1>
+<div class="container">
+  <% @companies.each do |company| %>
+    <div class="row justify-content-center">
+      <div class="col-md-10">
+        <div class="card">
+          <div class="card-header">
+            <%= company.name %>
+          </div>
+          <div class="card-block">
+            <div class="col-md-6">
+              <ul>
+                <li><%= company.status %></li>
+                <li><%= company.website_address %></li>
+              </ul>
+            </div>
+            <div class="col-md-6">
+              <ul>
+                <li><%= company.user %></li>
+                <li><%= company.phone_number %></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-2">
+        <div class="card">
+          <div class="card-header">
+            Actions
+          </div>
+          <div class="card-block">
+            <ul>
+              <li><%= link_to("Show", company) %></li>
+              <li><%= link_to("Edit", edit_company_path(company)) %></li>
+              <li><%= link_to("Destroy", company, method: :delete, data: { confirm: 'Are you sure?' }) %></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  <% end %>
 </div>
-<table>
-  <div class="row">
-    <thead>
-      <tr>
-        <div class="col">
-          <th>Name</th>
-        </div>
-        <div class="col">
-          <th>Phone number</th>
-        </div>
-        <div class="col">
-          <th>Website address</th>
-        </div>
-        <div class="col">
-          <th>User</th>
-        </div>
-        <div class="col">
-          <th>Actions</th>
-        </div>
-      </tr>
-    </thead>
-  </div>
-  <div class="row">
-    <tbody>
-      <% @companies.each do |company| %>
-        <tr>
-          <div class="col">
-            <td><%= company.name %></td>
-          </div>
-          <div class="col">
-            <td><%= company.phone_number %></td>
-          </div>
-          <div class="col">
-            <td><%= company.website_address %></td>
-          </div>
-          <div class="col">
-            <td><%= company.user %></td>
-          </div>
-          <div class="col">
-            <td><%= link_to 'Show', company %></td>
-            <td><%= link_to 'Edit', edit_company_path(company) %></td>
-            <td><%= link_to 'Destroy', company, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-          </div>
-        </tr>
-      <% end %>
-    </tbody>
-  </div>
-</table>
 
 <br>
 
