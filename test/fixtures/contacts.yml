@@ -1,7 +1,7 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  company: one
+  company: dnc_company
   title: CEO
   first_name: John
   last_name: Doe
@@ -11,7 +11,7 @@ one:
   email: johnd@test.com
 
 two:
-  company: two
+  company: is_taken
   title: Director of Marketing
   first_name: Jane
   last_name: Doe
