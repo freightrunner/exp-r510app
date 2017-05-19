@@ -13,7 +13,7 @@
 
   <div class="field">
     <% if current_user.try(:admin?) %>
-      <%= form.collection_select :user_id, User.order(:email), :id, :email %>
+      <%= form.collection_select :user_id, User.all.order(:email), :id, :email %>
     <% end %>
   </div>
 
