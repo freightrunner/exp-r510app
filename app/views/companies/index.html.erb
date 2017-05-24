@@ -7,15 +7,15 @@
             <%= company.name %>
           </div>
           <div class="card-block">
-            <div class="col-md-6">
+            <div class="col">
               <ul>
                 <li><%= company.status %></li>
                 <li><%= company.website_address %></li>
               </ul>
             </div>
-            <div class="col-md-6">
+            <div class="col" id="tog<%= company.id %>">
               <ul>
-                <li><%= company.user %></li>
+                <li><%= company.user_id %></li>
                 <li><%= company.phone_number %></li>
               </ul>
             </div>
@@ -29,7 +29,7 @@
           </div>
           <div class="card-block">
             <ul>
-              <li><%= link_to("Show", company) %></li>
+              <li><%= link_to("Show", company, remote: true) %></li>
               <li><%= link_to("Edit", edit_company_path(company)) %></li>
               <li><%= link_to("Destroy", company, method: :delete, data: { confirm: 'Are you sure?' }) %></li>
             </ul>
