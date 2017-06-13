@@ -18,7 +18,7 @@ postgres=# \q
 $ rails db:create
 $ rails db:migrate</code></pre>
 
-* Database Initialization <br>
+* Database Initialization (for Cloud9) <br>
 
 <code>$ sudo service postgresql start</code>
 
